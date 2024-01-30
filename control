@@ -1,0 +1,8 @@
+Package: me.luki.cassia
+Name: Cassia
+Version: 0.9.0
+Architecture: iphoneos-arm
+Description: Very much yes
+Maintainer: Luki
+Author: Luki
+Section: Tweaks
