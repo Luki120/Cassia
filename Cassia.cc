@@ -1,10 +1,9 @@
 #include <CoreGraphics/CoreGraphics.h>
 #include <objc/message.h>
 
-id(*msg)(id, SEL) = (id (*)(id, SEL)) objc_msgSend;
-id(*msg3)(id, SEL, id) = (id (*)(id, SEL, id)) objc_msgSend;
-id(*msg4)(id, SEL, id, id) = (id (*)(id, SEL, id, id)) objc_msgSend;
-id(*msg5)(id, SEL, CGRect, bool, id) = (id (*)(id, SEL, CGRect, bool, id)) objc_msgSend;
+static id (*msg)(id, SEL) = (id (*)(id, SEL)) objc_msgSend;
+static id (*msg4)(id, SEL, id, id) = (id (*)(id, SEL, id, id)) objc_msgSend;
+static id (*msg5)(id, SEL, CGRect, bool, id) = (id (*)(id, SEL, CGRect, bool, id)) objc_msgSend;
 
 template <typename _Type>
 static inline id msg_with_type(id self, SEL _cmd, _Type type) {

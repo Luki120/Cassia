@@ -8,7 +8,7 @@ on:
     
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-14
     steps:
       - uses: actions/checkout@main
 
@@ -27,12 +27,6 @@ jobs:
           ref: master
           sparse-checkout: iPhoneOS16.5.sdk
           path: theos/sdks
-
-      - name: Checkout LibGcUniversalDocumentation/master
-        uses: actions/checkout@main
-        with:
-          repository: MrGcGamer/LibGcUniversalDocumentation
-          path: LibGcUniversalDocumentation
 
       - name: Build package
         run: |
